@@ -260,6 +260,7 @@
 			</list>
 		</property>
 		<property name="exam" ref="exam1" />
+		<property name="ejemplo" ref="ejemplo1" />
 	</bean>
 	
 	<bean id="announcement2" class="domain.Announcement">
@@ -273,6 +274,7 @@
 			</list>
 		</property>
 		<property name="exam" ref="exam2" />
+		<property name="ejemplo" ref="ejemplo2" />
 	</bean>		
 	
 	<bean id="announcement3" class="domain.Announcement">
@@ -300,6 +302,7 @@
 			</list>
 		</property>
 		<property name="exam" ref="exam3" />
+		<property name="ejemplo" ref="ejemplo2" />
 	</bean>
 	
 	<bean id="announcement5" class="domain.Announcement">
@@ -324,6 +327,7 @@
 			</list>
 		</property>
 		<property name="exam" ref="exam1" />
+		<property name="ejemplo" ref="ejemplo1" />
 	</bean>
 	
 	<bean id="announcement7" class="domain.Announcement">
@@ -533,6 +537,34 @@
 		<property name="maximumMark" value="1" />
 		<property name="answer" value="Answer 8" />
 		<property name="exam" ref="exam4" />						
+	</bean>		
+	
+	<bean id="ejemplo1" class="domain.Ejemplo">
+	<property name="nombre" value="juan" />
+	<property name="fecha" value="12/24/2009" />
+	<property name="numero" value="9" />
+	<property name="precio" value="34.5" />
+	<property name="anuncio" >
+	<list>
+	<ref bean="announcement1"/>
+	<ref bean="announcement6"/>
+	</list>
+	</property>
+	</bean>
+	
+	
+	<bean id="ejemplo2" class="domain.Ejemplo">
+	<property name="nombre" value="jose" />
+	<property name="fecha" value="12/24/2010" />
+	<property name="numero" value="8" />
+	<property name="precio" value="35.9" />
+	
+	<property name="anuncio" >
+	<list>
+	<ref bean="announcement2"/>
+	<ref bean="announcement4"/>
+	</list>
+	</property>
 	</bean>				
 	
 </beans>

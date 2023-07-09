@@ -72,6 +72,30 @@
 			</li>
 		</security:authorize>
 		
+		<security:authorize access="isAuthenticated()">
+
+			<li>
+
+				<a class="fNiv">
+
+					<spring:message code="master.page.profile.ejemplo" />
+
+			        (<security:authentication property="principal.username" />)
+
+				</a>
+
+				<ul>
+
+					<li class="arrow"></li>
+
+					<li> <a href="ejemplo/list.do"><spring:message code="master.page.profile.ejemplo.list"></spring:message></a> </li>
+
+				</ul>
+
+			</li>
+
+		</security:authorize> 
+		
 	</ul>
 </div>
 

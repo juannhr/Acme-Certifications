@@ -48,6 +48,8 @@
 		
 		<security:intercept-url pattern="/exam/**" access="isAuthenticated()" />
 	
+		<security:intercept-url pattern="/ejemplo/**" access="isAuthenticated()" />
+	
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
 
 		<security:form-login 

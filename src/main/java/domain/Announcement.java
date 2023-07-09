@@ -1,8 +1,8 @@
 /*
  * Announcement.java
- * 
+ *
  * Copyright (C) 2017 Universidad de Sevilla
- * 
+ *
  * The use of this project is hereby constrained to the conditions of the
  * TDG Licence, a copy of which you may download from
  * http://www.tdg-seville.info/License.html
@@ -129,7 +129,7 @@ public class Announcement extends DomainEntity {
 
 	// Derived relationships --------------------------------------------------
 
-	private Certification	certification;
+	private Certification certification;
 
 
 	@NotNull
@@ -148,6 +148,20 @@ public class Announcement extends DomainEntity {
 
 	public void setCertification(final Certification certification) {
 		this.certification = certification;
+	}
+
+
+	private Ejemplo ejemplo;
+
+
+	@Valid
+	@ManyToOne(optional = true)
+	public Ejemplo getEjemplo() {
+		return this.ejemplo;
+	}
+
+	public void setEjemplo(final Ejemplo ejemplo) {
+		this.ejemplo = ejemplo;
 	}
 
 }
